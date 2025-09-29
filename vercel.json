@@ -1,34 +1,11 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "backend/server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
+    { "src": "backend/server.js", "use": "@vercel/node" },
+    { "src": "frontend/package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/dist/index.html"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "MONGO_URI": "mongodb+srv://shivam:cmrXkNs5INKiO4dU@cluster0.rlyglgo.mongodb.net/edusafe?retryWrites=true&w=majority&appName=Cluster0",
-    "JWT_SECRET": "MySuperSecretKey123!@#456",
-    "EMAIL_USER": "shivamtyagiji15@gmail.com",
-    "EMAIL_PASS": "whlb fhsw hcoi tshu",
-    "VITE_API_URL": "https://edusafe-i71e.vercel.app/api"
-  }
+    { "src": "/api/(.*)", "dest": "/backend/server.js" },
+    { "src": "/(.*)", "dest": "/frontend/dist/index.html" }
+  ]
 }

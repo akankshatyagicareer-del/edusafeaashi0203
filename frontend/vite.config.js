@@ -4,13 +4,14 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
   },
   server: {
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'https://edusafe-i71e.vercel.app',
+        target: process.env.VITE_API_URL || 'https://your-api-url',
         changeOrigin: true,
         secure: false,
       }
@@ -19,6 +20,6 @@ export default defineConfig({
   // Base path for production - important for Vercel
   base: './',
   define: {
-    'process.env': {}
-  }
-})
+    'process.env': {},
+  },
+});

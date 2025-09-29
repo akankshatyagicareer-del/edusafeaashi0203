@@ -31,7 +31,8 @@ const ResourceManagement = () => {
   });
 
   const { user } = useSelector((state) => state.auth);
- const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://edusafe-i71e.vercel.app/api';
+ const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://localhost:5000/api';
+ console.log(API_BASE_URL);
 
   useEffect(() => {
     if (user) {

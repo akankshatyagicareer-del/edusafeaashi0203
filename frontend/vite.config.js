@@ -17,7 +17,7 @@ export default defineConfig({
     }
   },
   // Base path for production - important for Vercel
-  base: '/',
+  base: './',
   define: {
     'process.env': {}
   }

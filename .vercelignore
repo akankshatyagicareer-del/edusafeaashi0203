@@ -1,0 +1,13 @@
+# .vercelignore
+backend/uploads/**
+backend/node_modules
+frontend/node_modules
+*.log
+.DS_Store
+.git
+*.md
+*.txt
+*.pdf
+*.mp4
+*.mp3
+*.zip
